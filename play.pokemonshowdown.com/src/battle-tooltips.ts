@@ -1455,7 +1455,7 @@ export class BattleTooltips {
 			if (!clientPokemon) throw new Error('Must pass either clientPokemon or serverPokemon');
 			let { min, ev0, ev84, ev252, max } = this.getSpeedRange(clientPokemon);
 			if (this.battle.gen < 3) {
-				if (this.battle.tier.includes('Random')) {
+				if (this.battle.tier.includes('Random') || this.battle.tier === 'Live Patch Battles Ver 1.0.0') {
 					return `<p><small>Spe</small> ${max} <small>(before stat stage changes)</small></p>`;
 				}
 				return `<p><small>Spe</small> ${min} to ${max} <small>(before stat stage changes)</small></p>`;
